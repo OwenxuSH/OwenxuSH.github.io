@@ -4,7 +4,7 @@ A static English academic homepage. Open `index.html` directly in a browser, or 
 
 ## GitHub Pages
 
-This directory is designed to be the root of a GitHub Pages user repository named `<username>.github.io`. After GitHub authentication, create that repository, push this directory to its `main` branch, and enable Pages from `main` / root if it is not enabled automatically.
+This directory is the root of the GitHub Pages user repository `OwenxuSH/OwenxuSH.github.io`. The public site is `https://owenxush.github.io/`, published from the `main` branch root.
 
 The site intentionally contains no local project manuscripts or PDFs. The source materials in `../resources/` are for drafting only, and are not needed by the deployed site.
 
