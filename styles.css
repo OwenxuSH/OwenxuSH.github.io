@@ -14,8 +14,8 @@ a:focus-visible{outline:3px solid #6b9e28;outline-offset:4px;border-radius:3px}
 .site-header{height:78px;position:sticky;top:0;z-index:10;background:rgba(247,247,243,.93);border-bottom:1px solid rgba(217,223,216,.8);backdrop-filter:blur(16px)}
 .header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
 .brand{display:inline-flex;align-items:center;gap:13px;white-space:nowrap;font-weight:700;letter-spacing:-.03em}
-.brand-mark{width:37px;height:37px;display:grid;place-items:center;background:var(--dark);border-radius:9px;color:var(--white);font-family:var(--serif);font-size:17px;line-height:1;letter-spacing:-.09em}
-.brand-dot{color:var(--accent)}
+.brand-avatar{position:relative;display:block;width:42px;height:42px;flex:none;overflow:hidden;border:1px solid #c7d6c1;border-radius:9px;background:#eaf0e5}
+.brand-avatar img{position:absolute;left:50%;top:50%;display:block;width:54px;height:54px;max-width:none;transform:translate(-50%,-50%)}
 .brand-name{font-size:18px}
 nav{display:flex;align-items:center;gap:34px;font-size:14px;font-weight:600}
 nav a{transition:color .2s}
