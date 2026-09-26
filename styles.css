@@ -138,6 +138,7 @@ h2{font-size:clamp(37px,4vw,54px);line-height:1.13}
 .project-figure>a:hover{border-color:#8eb893;box-shadow:0 10px 25px rgba(23,55,43,.08)}
 .project-figure img{display:block;width:100%;height:100%;object-fit:contain}
 .project-figure figcaption{margin-top:8px;color:#718276;font-size:10px;letter-spacing:.08em;line-height:1.5;text-transform:uppercase}
+.project-figure-note{display:block;margin-bottom:5px;color:#52695d;font-size:12px;font-weight:500;letter-spacing:0;line-height:1.45;text-transform:none}
 .project-figure figcaption a{color:#487558;text-decoration:underline;text-decoration-color:#a8c0a9;text-underline-offset:3px}
 .tags{display:flex;flex-wrap:wrap;gap:7px}
 .tags span{padding:4px 10px;border:1px solid #cbdaca;border-radius:100px;color:#4d7157;font-size:11px;font-weight:600;line-height:1.4}
