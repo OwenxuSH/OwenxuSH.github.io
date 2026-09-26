@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f7f3">
-  <meta name="description" content="About Zhengning Xu, a computer science undergraduate researcher at ShanghaiTech University.">
+  <meta name="description" content="Learn about Zhengning Xu's research philosophy, academic background, and interests in AI for Science, computational biology, and generative world models.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="About · Zhengning Xu">
-  <meta property="og:description" content="About Zhengning Xu, a computer science undergraduate researcher at ShanghaiTech University.">
+  <meta property="og:description" content="Learn about Zhengning Xu's research philosophy, academic background, and interests in AI for Science, computational biology, and generative world models.">
   <meta property="og:url" content="https://owenxush.github.io/about.html">
   <title>About · Zhengning Xu</title>
   <link rel="canonical" href="https://owenxush.github.io/about.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,7 +34,7 @@
       <div class="about-intro-copy">
         <p class="section-kicker">About</p>
         <h1 id="about-title">About me.</h1>
-        <p>I’m interested in how machine learning can help us ask better scientific questions—and how to tell when its answers hold up.</p>
+        <p>I study how to formulate scientific problems so that AI outputs can become useful, testable evidence.</p>
       </div>
       <img class="about-portrait" src="assets/zhengning-portrait.webp" width="260" height="260" alt="Illustrated portrait of Zhengning Xu">
     </section>
@@ -42,13 +42,38 @@
     <section class="about-detail shell" aria-label="Background and interests">
       <div class="about-story">
         <h2>Curiosity across disciplines.</h2>
-        <p>I study Computer Science and Technology at ShanghaiTech University. My research interests center on <strong>AI for science</strong>, particularly computational biology, multimodal learning, and methods that make model outputs easier to test and interpret.</p>
-        <p>My work has taken me from synthetic lethality and cancer drug response to open-vocabulary animal behavior analysis. I have also worked on causal evaluation for video generation and motion analysis for wearable sensing. Across these settings, I am interested in the same question: <strong>what evidence tells us a model has learned something useful?</strong></p>
+        <p>I study Computer Science and Technology at ShanghaiTech University. My research interests center on <strong>AI for Science</strong>, especially computational biology, multimodal learning, generative world models, and ways to test whether model outputs support meaningful claims.</p>
+        <p>My projects span wearable motion sensing, animal behavior, context-specific genetic interactions, cancer drug response, and video generation. The domains differ, but each has led me to ask a similar question: <strong>what must a model represent, and what evidence would show that it has learned something useful?</strong></p>
       </div>
       <aside class="about-facts" aria-label="At a glance">
         <div><span class="meta-label">Education</span><p>ShanghaiTech University<br>B.S. in Computer Science and Technology</p></div>
         <div><span class="meta-label">Research interests</span><p>AI for Science · Bioinformatics<br>Multimodal Learning · Evaluation</p></div>
       </aside>
+    </section>
+
+    <section class="about-philosophy">
+      <div class="shell writing-layout">
+        <div class="section-intro">
+          <p class="section-kicker">Research philosophy</p>
+          <h2>Choose the question before optimizing the answer.</h2>
+        </div>
+        <div class="philosophy-copy">
+          <p>Modern AI is becoming remarkably good at optimization. Once a task has been reduced to a dataset, a metric, and an objective, implementation and iterative improvement can increasingly be accelerated by coding agents. That makes the upstream choices more consequential: <strong>is this the right objective, and what would count as evidence?</strong></p>
+          <p>A drug-response model can lower prediction error while offering explanations that are hard to validate. A behavior model can score well while using a representation that misses meaningful behaviors. A video generator can make a convincing future without modeling the causal process that produced it.</p>
+          <p>I work backward from the scientific claim. I ask what capability a system should have, what evidence would support that claim, and what current benchmarks may be hiding. The answer may call for a new model, a better representation, a more informative benchmark, or a stronger validation method.</p>
+          <p>That is how I think about <strong>AI for Science</strong>: formulating scientific questions into computational problems that are worth optimizing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-outlook shell">
+      <p class="section-kicker">Looking forward</p>
+      <h2>From prediction toward intervention, mechanism, and discovery.</h2>
+      <div class="outlook-grid">
+        <p>In biology, I want to study models that help us reason about what will change, why it changes, and how it might be deliberately altered.</p>
+        <p>In generative world models, I want to move from plausibility toward structured dynamics and causality—understanding that can be tested under intervention rather than assumed from appearance.</p>
+      </div>
+      <p class="outlook-close">AI is becoming increasingly capable of optimizing the objectives we specify. Science still requires us to decide which objectives are worth optimizing.</p>
     </section>
   </main>
 
