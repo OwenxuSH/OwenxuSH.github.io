@@ -12,7 +12,7 @@
   <title>About · Zhengning Xu</title>
   <link rel="canonical" href="https://owenxush.github.io/about.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,7 +34,7 @@
       <div class="about-intro-copy">
         <p class="section-kicker">About</p>
         <h1 id="about-title">About me.</h1>
-        <p>I study how to formulate scientific problems so that AI outputs can become useful, testable evidence.</p>
+        <p>I’m Zhengning Xu, a Computer Science and Technology undergraduate at ShanghaiTech University. I work across AI for Biology and generative world models, guided by a question about what makes an AI result scientifically meaningful.</p>
       </div>
       <img class="about-portrait" src="assets/zhengning-portrait.webp" width="260" height="260" alt="Illustrated portrait of Zhengning Xu">
     </section>
@@ -42,12 +42,13 @@
     <section class="about-detail shell" aria-label="Background and interests">
       <div class="about-story">
         <h2>Curiosity across disciplines.</h2>
-        <p>I study Computer Science and Technology at ShanghaiTech University. My research interests center on <strong>AI for Science</strong>, especially computational biology, multimodal learning, generative world models, and ways to test whether model outputs support meaningful claims.</p>
-        <p>My projects span wearable motion sensing, animal behavior, context-specific genetic interactions, cancer drug response, and video generation. The domains differ, but each has led me to ask a similar question: <strong>what must a model represent, and what evidence would show that it has learned something useful?</strong></p>
+        <p>My research interests center on <strong>AI for Science</strong>: how to formulate a scientific question so that a model can help answer it. I am especially interested in computational biology, multimodal learning, and generative world models.</p>
+        <p>My experience has moved across genetic interactions, wearable motion sensing, mouse behavior, cancer drug response, and video generation. Each setting forced me to think about a different part of the same problem: <strong>what has to be measured or represented, what should the model be asked to do, and what evidence would make its output credible?</strong></p>
+        <p>I enjoy the point where machine learning meets a domain question that existing benchmarks do not quite capture. That is where an apparently technical modeling task often becomes a question about scientific judgment.</p>
       </div>
       <aside class="about-facts" aria-label="At a glance">
         <div><span class="meta-label">Education</span><p>ShanghaiTech University<br>B.S. in Computer Science and Technology</p></div>
-        <div><span class="meta-label">Research interests</span><p>AI for Science · Bioinformatics<br>Multimodal Learning · Evaluation</p></div>
+        <div><span class="meta-label">Research interests</span><p>AI for Biology · Multimodal Learning<br>Generative World Models · Evaluation</p></div>
       </aside>
     </section>
 
@@ -58,10 +59,46 @@
           <h2>Choose the question before optimizing the answer.</h2>
         </div>
         <div class="philosophy-copy">
-          <p>Modern AI is becoming remarkably good at optimization. Once a task has been reduced to a dataset, a metric, and an objective, implementation and iterative improvement can increasingly be accelerated by coding agents. That makes the upstream choices more consequential: <strong>is this the right objective, and what would count as evidence?</strong></p>
-          <p>A drug-response model can lower prediction error while offering explanations that are hard to validate. A behavior model can score well while using a representation that misses meaningful behaviors. A video generator can make a convincing future without modeling the causal process that produced it.</p>
-          <p>I work backward from the scientific claim. I ask what capability a system should have, what evidence would support that claim, and what current benchmarks may be hiding. The answer may call for a new model, a better representation, a more informative benchmark, or a stronger validation method.</p>
-          <p>That is how I think about <strong>AI for Science</strong>: formulating scientific questions into computational problems that are worth optimizing.</p>
+          <p>Modern AI is becoming remarkably good at optimization. Once a task is reduced to a dataset, a metric, and an objective, much of the remaining loop—implementation, debugging, experimentation, ablation, and iterative improvement—can increasingly be accelerated by coding agents. This changes what I find most intellectually interesting about research.</p>
+          <p class="philosophy-emphasis">The harder question is often no longer simply how to optimize an objective, but whether the objective deserves to be optimized at all.</p>
+          <p>A drug-response model may achieve lower error while offering explanations that cannot be validated. A behavior-recognition system may achieve high accuracy while operating in the wrong representational space. A video generator may produce visually convincing futures while failing to model the causal process that produced them.</p>
+          <p>These are not edge cases. To me, they are often the real research problem.</p>
+          <p>I therefore work from the scientific claim backward. I start by asking what capability the system is supposed to possess, what evidence would support that claim, and what failure mode current benchmarks may be hiding. Only then do I decide whether the solution requires a new model, a new representation, a better benchmark, a causal intervention, or a different validation framework.</p>
+          <p>This is how I think about <strong>AI for Science</strong>: formulating scientific questions into computational problems that are actually worth optimizing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-path shell" aria-labelledby="path-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">How my questions developed</p><h2 id="path-title">What each project taught me.</h2></div>
+        <p>Different domains have sharpened the same research instinct.</p>
+      </div>
+      <div class="path-list">
+        <article class="path-item"><span>01 / Measurement</span><div><h3>Start with what the data can express.</h3><p>Working on a fabric wristband showed me why gesture recognition depends on how a motion is represented. I used Dynamic Time Warping to compare swings despite differences in timing. In MouseGPT, I encountered a larger version of the question: should animal behavior be restricted to predefined labels, or can language provide a richer space for discovery?</p></div></article>
+        <article class="path-item"><span>02 / Context</span><div><h3>Ask where a prediction holds.</h3><p>In synthetic lethality, the same gene pair may behave differently across cancer cell lines. That project made biological context a first-class modeling question for me. A model's output is only as meaningful as the cellular setting it actually represents.</p></div></article>
+        <article class="path-item"><span>03 / Evidence</span><div><h3>Examine explanations systematically.</h3><p>In drug-response modeling, I became interested in the limits of accuracy alone. HappyRabbit combines a controlled comparison of prediction models with attribution analysis, in-silico perturbations, pathway analysis, and literature auditing to ask whether explanations hold up beyond selected examples.</p></div></article>
+        <article class="path-item"><span>04 / Causality</span><div><h3>Test what a generative model understands.</h3><p>CausalCascade carries the same instinct into video generation. A model can produce a convincing sequence while missing the dependencies that make events unfold. Structured event graphs and controlled interventions let us ask whether it has modeled a process rather than only its appearance.</p></div></article>
+      </div>
+    </section>
+
+    <section class="about-current" aria-labelledby="about-current-title">
+      <div class="shell">
+        <p class="section-kicker">Current research</p>
+        <h2 id="about-current-title">Two directions, one standard of evidence.</h2>
+        <div class="about-current-grid">
+          <article>
+            <span class="meta-label">AI for Biology</span>
+            <h3>Make biological predictions meaningful in context.</h3>
+            <p>I am interested in AI systems that model biological systems while preserving the context, heterogeneity, and structure that make biological predictions meaningful. My work ranges from context-specific synthetic lethality and drug-response prediction to multimodal animal-behavior understanding.</p>
+            <p>Across these projects, I am particularly interested in moving beyond raw prediction toward representations and explanations that can support intervention, mechanism, and discovery. In synthetic lethality, this means taking seriously the fact that genetic interactions change across cellular environments. In drug response, it means testing explanations systematically under a consistent benchmark.</p>
+          </article>
+          <article>
+            <span class="meta-label">Generative world models</span>
+            <h3>Find out when generation becomes modeling.</h3>
+            <p>I am interested in whether generative models can move from producing plausible observations to representing how the world actually evolves. A visually convincing future is not necessarily a physically or causally correct one.</p>
+            <p>A useful world model should preserve entities and states, respect event dependencies, and respond selectively to interventions. My work on CausalCascade studies this gap with simulator-grounded scenes, structured event graphs, and controlled changes to the scene. The broader question is simple: <strong>when does generation become modeling?</strong></p>
+          </article>
         </div>
       </div>
     </section>
@@ -69,9 +106,10 @@
     <section class="about-outlook shell">
       <p class="section-kicker">Looking forward</p>
       <h2>From prediction toward intervention, mechanism, and discovery.</h2>
+      <p class="outlook-lede">I want to build AI systems that are useful because they address the scientific bottleneck that matters. The work begins by deciding which question, representation, and evidence can carry a meaningful claim.</p>
       <div class="outlook-grid">
-        <p>In biology, I want to study models that help us reason about what will change, why it changes, and how it might be deliberately altered.</p>
-        <p>In generative world models, I want to move from plausibility toward structured dynamics and causality—understanding that can be tested under intervention rather than assumed from appearance.</p>
+        <p>In biology, I am interested in moving from prediction toward perturbation, intervention, and mechanism—models that can help us reason about what will change, why it changes, and how it might be deliberately altered.</p>
+        <p>In generative world models, I am interested in moving from plausibility toward structured dynamics and causality—models whose predictions remain coherent under intervention and whose internal understanding can be tested rather than assumed.</p>
       </div>
       <p class="outlook-close">AI is becoming increasingly capable of optimizing the objectives we specify. Science still requires us to decide which objectives are worth optimizing.</p>
     </section>

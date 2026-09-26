@@ -12,7 +12,7 @@
   <title>Research · Zhengning Xu</title>
   <link rel="canonical" href="https://owenxush.github.io/research.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,11 +30,16 @@
   </header>
 
   <main id="main">
-    <section class="page-intro shell research-intro" aria-labelledby="page-title"><p class="section-kicker">Research</p><h1 id="page-title">Questions worth testing.</h1><p>I study what AI systems must represent, predict, or explain before their outputs can support scientific claims. My projects span AI for Biology, multimodal behavior analysis, and generative world models.</p><p class="research-intro-question">Across these areas: <strong>What are we asking the model to learn, and how would we know if it learned it?</strong></p></section>
+    <section class="page-intro shell research-intro" aria-labelledby="page-title">
+      <p class="section-kicker">Research</p>
+      <h1 id="page-title">Questions worth testing.</h1>
+      <p>I study what AI systems must represent, predict, or explain before their outputs can support scientific claims. My work ranges from genetic interactions and cancer drug response to animal behavior, wearable sensing, and causal video generation.</p>
+      <p class="research-intro-question">Across these areas: <strong>What are we asking the model to learn, and how would we know if it learned it?</strong></p>
+    </section>
     <section class="research-section shell" id="research" aria-labelledby="research-title">
       <div class="section-heading">
         <div><p class="section-kicker">02 / Research</p><h2 id="research-title">Selected projects</h2></div>
-        <p>Questions, methods, and the work I contributed.</p>
+        <p>The problem behind each project, the approach, and what it changed in my thinking.</p>
       </div>
 
       <div class="research-area-label" id="biology"><span>01</span><h3>AI for Biology</h3><p>Preserving context, structure, and evidence in biological prediction.</p></div>
@@ -44,8 +49,11 @@
           <div class="project-main">
             <div class="project-topline"><span>Bioinformatics</span><span>ShanghaiTech University · Course research</span></div>
             <h3>Context-specific synthetic lethality <span>— interactions depend on context</span></h3>
-            <p class="project-summary">Synthetic lethality is often treated as gene-pair classification, but the same pair can behave differently across cell lines. This project explored multimodal representations combining gene expression, scGPT, GenePT, ESM protein embeddings, and protein–protein interaction networks.</p>
-            <p class="project-contribution"><strong>My work.</strong> Collected and processed data, helped design a GCN-based architecture, and benchmarked within-cell-line prediction alongside generalization to unseen cellular contexts. This work first made me treat biological context as part of the problem definition rather than a nuisance variable.</p>
+            <p class="project-question">The question · Does a predicted genetic interaction still hold in a different cellular context?</p>
+            <p class="project-summary">Synthetic lethality offers a way to target cancer cells through pairs of genes: disrupting both can be harmful even when disrupting either one alone is tolerated. It is often formulated as gene-pair classification, yet the interaction can vary substantially across cell lines with different genetic backgrounds.</p>
+            <p class="project-detail">We explored a multimodal biological representation combining gene expression, scGPT, GenePT, ESM protein embeddings, and protein–protein interaction networks. We considered both prediction within a cell line and generalization to cellular contexts unseen during training. Those are different scientific claims, and they need to be evaluated separately.</p>
+            <p class="project-contribution"><strong>My work.</strong> I collected and processed data, helped design the GCN-based architecture, and benchmarked single-cell-line and cross-cell-line settings.</p>
+            <p class="project-takeaway">What stayed with me: a prediction is only as meaningful as the context represented by the model.</p>
             <div class="tags"><span>Multi-omics</span><span>GCN</span><span>Synthetic lethality</span><span>Context generalization</span></div>
           </div>
         </article>
@@ -55,8 +63,11 @@
           <div class="project-main">
             <div class="project-topline"><span>Computational oncology</span><span>Shanghai Jiao Tong University</span></div>
             <h3>HappyRabbit <span>— interpretable cancer drug response</span></h3>
-            <p class="project-summary">HappyRabbit asks what a drug-response model should provide beyond low prediction error. The study built a common-panel benchmark of 122,178 drug–cell-line pairs, comparing ten models under identical splits and combining prediction with attribution analysis, in-silico perturbation, pathway analysis, and literature-based evidence auditing.</p>
-            <p class="project-contribution"><strong>My work.</strong> Contributed to the PrototypeSCL / SparseProt model design, benchmark construction against nine baselines, and an attribution workflow using integrated gradients, virtual knockouts, and independent literature checks. PrototypeSCL achieved the strongest reported performance in this controlled comparison; the broader aim is to assess whether model explanations are biologically defensible.</p>
+            <p class="project-question">The question · What should a drug-response model provide beyond a low prediction error?</p>
+            <p class="project-summary">Drug-response prediction is useful only if comparisons are fair and the evidence behind a model's explanations can be examined. An accurate predictor can still be difficult to trust when benchmarks use different splits or when explanations are illustrated through a few selected examples.</p>
+            <p class="project-detail">HappyRabbit built a common-panel benchmark of 122,178 drug–cell-line pairs and evaluated ten models under identical splits. The study paired prediction with dataset-scale attribution validation, in-silico perturbation, pathway analysis, and literature-based evidence auditing. PrototypeSCL achieved the strongest reported performance within this controlled comparison.</p>
+            <p class="project-contribution"><strong>My work.</strong> I contributed to the PrototypeSCL / SparseProt model design, the benchmark against nine baselines, and an attribution workflow using integrated gradients, virtual knockouts, and independent literature checks.</p>
+            <p class="project-takeaway">The broader goal is to move from predictive performance toward biologically defensible reasoning. Computational perturbations and literature checks help audit a claim; experimental validation remains a separate step.</p>
             <div class="tags"><span>Drug response</span><span>Graph learning</span><span>Interpretability</span></div>
           </div>
         </article>
@@ -66,8 +77,11 @@
           <div class="project-main">
             <div class="project-topline"><span>Computational neuroscience</span><span>ShanghaiTech University</span></div>
             <h3>MouseGPT <span>— describing behavior in natural language</span></h3>
-            <p class="project-summary">MouseGPT reframes animal-behavior analysis as open-vocabulary multimodal understanding. It maps mouse videos into natural-language descriptions and semantic representations for behavior profiling, clustering, and discovery, using more than 42 million video frames.</p>
-            <p class="project-contribution"><strong>My work.</strong> Reproduced the analysis pipeline and comparison methods, including pose-tracking baselines; evaluated model behavior on established benchmarks and improved the agent interface for downstream analysis. The project highlights how the chosen representation shapes what a model can discover.</p>
+            <p class="project-question">The question · What can researchers discover when behavior is represented in language instead of fixed labels?</p>
+            <p class="project-summary">Traditional animal-behavior analysis often relies on predefined categories, manual annotation, or purely kinematic similarity. Those choices can limit the range of behaviors a researcher is able to describe or discover. MouseGPT reframes the task as open-vocabulary multimodal understanding.</p>
+            <p class="project-detail">Built on more than 42 million video frames, the framework maps mouse video into natural-language descriptions and computable semantic representations. These support behavior profiling, clustering across views, and novel-behavior discovery. The interesting shift is in the research question itself: the representation gives researchers a way to ask about behavior beyond a fixed set of classes.</p>
+            <p class="project-contribution"><strong>My work.</strong> I reproduced the MouseGPT analysis pipeline and comparison methods, including pose-tracking and keypoint-based baselines; ran evaluation on established benchmarks such as MABE 2022 and CalMS21; and improved the agent interface used for downstream analysis.</p>
+            <p class="project-takeaway">The principle I took from this work extends beyond mouse behavior: representation determines what a model is capable of discovering.</p>
             <div class="tags"><span>Vision-language models</span><span>Behavior analysis</span><span>Benchmarking</span></div>
           </div>
         </article>
@@ -81,8 +95,11 @@
           <div class="project-main">
             <div class="project-topline"><span>Video generation</span><span>Shanghai Jiao Tong University</span></div>
             <h3>CausalCascade <span>— evaluating how events unfold</span></h3>
-            <p class="project-summary">CausalCascade evaluates whether video generation models can faithfully realize how events unfold through causal chains. It includes 50 simulator-grounded physical scenes, thousands of controlled variants, structured event graphs, and paired counterfactual interventions, and tests nine image-to-video models.</p>
-            <p class="project-contribution"><strong>Research focus.</strong> Studying the gap between recovering what should happen and generating how it actually happens. The broader question is whether a visually convincing future reflects a model of the causal process that produced it.</p>
+            <p class="project-question">The question · If a generated video looks right, did the model learn why events happened?</p>
+            <p class="project-summary">A video model can generate a visually convincing future while missing the physical event chain that makes the scene coherent. CausalCascade evaluates whether image-to-video models can realize complete causal processes instead of isolated plausible events.</p>
+            <p class="project-detail">The benchmark contains 50 simulator-grounded physical scenes, thousands of controlled variants, structured event graphs, and paired counterfactual interventions. Across nine image-to-video models, the study finds a persistent gap between recovering what should happen and generating how it actually happens. It examines event understanding, motion localization, and the consistency of a model's response when an intervention changes the scene.</p>
+            <p class="project-contribution"><strong>Research focus.</strong> I am interested in using structured events and interventions to test claims of causal understanding in generative models.</p>
+            <p class="project-takeaway">The question this raises for me is broader than video: when does generation become modeling?</p>
             <div class="tags"><span>Video generation</span><span>Causal reasoning</span><span>Evaluation</span></div>
           </div>
         </article>
@@ -96,8 +113,11 @@
           <div class="project-main">
             <div class="project-topline"><span>Wearable sensing</span><span>ShanghaiTech University · PRP</span></div>
             <h3>Fabric wristband for human–machine interaction</h3>
-            <p class="project-summary">A breathable fabric wristband with physiological and motion sensing, designed for comfortable, wireless monitoring and gesture recognition.</p>
-            <p class="project-contribution"><strong>My work.</strong> Designed a Dynamic Time Warping approach to compare swing sequences and cluster forehand and backhand gestures despite variations in timing. This early project introduced me to the role representation plays in making sensor data useful.</p>
+            <p class="project-question">The question · How should variable-length motion be compared when people perform the same gesture at different speeds?</p>
+            <p class="project-summary">This project developed a breathable fabric wristband for comfortable physiological and motion sensing. The integrated system supports wireless monitoring of heart rate, oxygen saturation, and gesture recognition.</p>
+            <p class="project-detail">For swing analysis, timing can vary even when two motions express the same gesture. Dynamic Time Warping aligns motion sequences before clustering forehand and backhand swings, allowing the analysis to focus on shape rather than exact timing.</p>
+            <p class="project-contribution"><strong>My work.</strong> I designed the Dynamic Time Warping approach for swing comparison and clustering. This early project introduced me to the role representation plays in making sensor data useful.</p>
+            <p class="project-takeaway">A model can only learn from the distinctions a representation makes visible.</p>
             <div class="tags"><span>Time-series analysis</span><span>DTW</span><span>Human–machine interaction</span></div>
           </div>
         </article>
@@ -107,7 +127,11 @@
     <section class="research-common">
       <div class="shell research-common-layout">
         <p class="section-kicker">A common thread</p>
-        <div><h2>What are we asking the model to learn—and how would we know?</h2><p>Biological context, semantic behavior, validated explanations, and causal event structure are different parts of the same challenge: define the capability a scientific task needs, then build evidence that tests it.</p></div>
+        <div>
+          <h2>What are we asking the model to learn—and how would we know?</h2>
+          <p>At first glance, these projects span very different domains. Synthetic lethality asks how biological interactions change across cellular contexts. MouseGPT asks whether animal behavior should be represented through fixed labels at all. HappyRabbit asks what biological evidence is required beyond predictive accuracy. CausalCascade asks whether visual plausibility is sufficient evidence of a learned world model.</p>
+          <p>To me, they are versions of the same problem. I want to start with the scientific claim, then choose the representation, model, and evaluation that can genuinely test it.</p>
+        </div>
       </div>
     </section>
 
