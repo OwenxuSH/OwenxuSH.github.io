@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f3">
+  <meta name="description" content="Research projects by Zhengning Xu in AI for science, computational biology, video evaluation, and wearable sensing.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research · Zhengning Xu">
+  <meta property="og:description" content="Research projects by Zhengning Xu in AI for science, computational biology, video evaluation, and wearable sensing.">
+  <meta property="og:url" content="https://owenxush.github.io/research.html">
+  <title>Research · Zhengning Xu</title>
+  <link rel="canonical" href="https://owenxush.github.io/research.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Zhengning Xu, home"><span class="brand-mark">ZX<span class="brand-dot">.</span></span><span class="brand-name">Zhengning Xu</span></a>
+      <nav aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="publications.html">Publications</a>
+        <a class="nav-contact" href="contact.html">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro shell" aria-labelledby="page-title"><p class="section-kicker">Research</p><h1 id="page-title">Questions worth testing.</h1><p>Selected projects in computational biology, multimodal models, and the evaluation of complex systems.</p></section>
+    <section class="research-section shell" id="research" aria-labelledby="research-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">02 / Research</p><h2 id="research-title">Selected projects</h2></div>
+        <p>Questions, methods, and the work I contributed.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project" id="happyrabbit">
+          <div class="project-index">01 <span class="project-icon" aria-hidden="true">✳</span></div>
+          <div class="project-main">
+            <div class="project-topline"><span>Computational oncology</span><span>Shanghai Jiao Tong University</span></div>
+            <h3>HappyRabbit <span>— interpretable cancer drug response</span></h3>
+            <p class="project-summary">A drug response system combining molecular graphs and cell-line gene expression with gene-level attribution, literature review, and evidence auditing.</p>
+            <p class="project-contribution"><strong>My work.</strong> Contributed to the PrototypeSCL / SparseProt model design, a common-panel benchmark against nine baselines, and an attribution workflow using integrated gradients, virtual knockouts, and independent literature checks.</p>
+            <div class="tags"><span>Drug response</span><span>Graph learning</span><span>Interpretability</span></div>
+          </div>
+        </article>
+
+        <article class="project" id="mousegpt">
+          <div class="project-index">02 <span class="project-icon" aria-hidden="true">⌁</span></div>
+          <div class="project-main">
+            <div class="project-topline"><span>Computational neuroscience</span><span>ShanghaiTech University</span></div>
+            <h3>MouseGPT <span>— describing behavior in natural language</span></h3>
+            <p class="project-summary">A vision-language framework that maps mouse videos to open-vocabulary behavioral descriptions, then uses those descriptions for profiling, clustering, and behavior discovery.</p>
+            <p class="project-contribution"><strong>My work.</strong> Reproduced the analysis pipeline and comparison methods, including pose-tracking baselines; evaluated model behavior on established benchmarks and improved the agent interface for downstream analysis.</p>
+            <div class="tags"><span>Vision-language models</span><span>Behavior analysis</span><span>Benchmarking</span></div>
+          </div>
+        </article>
+
+        <article class="project" id="causalcascade">
+          <div class="project-index">03 <span class="project-icon" aria-hidden="true">↳</span></div>
+          <div class="project-main">
+            <div class="project-topline"><span>Video generation</span><span>Shanghai Jiao Tong University</span></div>
+            <h3>CausalCascade <span>— evaluating how events unfold</span></h3>
+            <p class="project-summary">A simulator-grounded benchmark for whether generated videos preserve event chains and respond coherently to interventions. Its evaluations cover event understanding, motion localization, and counterfactual consistency.</p>
+            <p class="project-contribution"><strong>Research focus.</strong> Studying evaluation that goes beyond visual plausibility to test whether model-generated dynamics follow the causal structure of a scene.</p>
+            <div class="tags"><span>Video generation</span><span>Causal reasoning</span><span>Evaluation</span></div>
+          </div>
+        </article>
+
+        <article class="project" id="synthetic-lethality">
+          <div class="project-index">04 <span class="project-icon" aria-hidden="true">＋</span></div>
+          <div class="project-main">
+            <div class="project-topline"><span>Bioinformatics</span><span>ShanghaiTech University · Course research</span></div>
+            <h3>Context-specific synthetic lethality prediction</h3>
+            <p class="project-summary">A multi-omics framework for predicting genetic interactions within and across cancer cell lines, combining cell-line-specific protein interaction graphs with gene and protein representations.</p>
+            <p class="project-contribution"><strong>My work.</strong> Collected and processed data, helped design the GCN-based architecture, and benchmarked single-cell-line and cross-cell-line prediction settings.</p>
+            <div class="tags"><span>Multi-omics</span><span>GCN</span><span>Synthetic lethality</span></div>
+          </div>
+        </article>
+
+        <article class="project" id="wristband">
+          <div class="project-index">05 <span class="project-icon" aria-hidden="true">〰</span></div>
+          <div class="project-main">
+            <div class="project-topline"><span>Wearable sensing</span><span>ShanghaiTech University · PRP</span></div>
+            <h3>Fabric wristband for human–machine interaction</h3>
+            <p class="project-summary">A breathable fabric wristband with physiological and motion sensing, designed for comfortable, wireless monitoring and gesture recognition.</p>
+            <p class="project-contribution"><strong>My work.</strong> Designed a Dynamic Time Warping approach to compare swing sequences and cluster forehand and backhand gestures despite variations in timing.</p>
+            <div class="tags"><span>Time-series analysis</span><span>DTW</span><span>Human–machine interaction</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 Zhengning Xu</span><span>Shanghai, China <span aria-hidden="true">·</span> Built with care and curiosity</span><a href="index.html">Back to home ↗</a></div></footer>
+</body>
+</html>
