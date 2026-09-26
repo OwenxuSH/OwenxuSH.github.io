@@ -47,9 +47,9 @@ h1 em{color:#407a58;font-weight:400}
 .hero-evidence-item{display:grid;grid-template-columns:154px 1fr;align-items:center;gap:12px;padding:15px 0;border-top:1px solid #cad9c8}
 .hero-evidence-item strong{color:#1b4c3a;font-family:var(--serif);font-size:40px;font-weight:400;letter-spacing:-.035em;line-height:1}
 .hero-evidence-item strong span{color:#4c8655}
-.hero-evidence-item b{display:block;color:#254838;font-size:13px;line-height:1.4}
-.hero-evidence-item p{color:#637568;font-size:12px;line-height:1.55;margin:3px 0 0}
-.hero-evidence-foot{padding-top:15px;margin:0;border-top:1px solid #cad9c8;color:#708074;font-size:11px;line-height:1.5}
+.hero-evidence-item b{display:block;color:#254838;font-size:14px;line-height:1.4}
+.hero-evidence-item p{color:#637568;font-size:13px;line-height:1.55;margin:3px 0 0}
+.hero-evidence-foot{padding-top:15px;margin:0;border-top:1px solid #cad9c8;color:#708074;font-size:12px;line-height:1.5}
 .home-links{padding-block:12px 110px}
 .home-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .home-link{position:relative;min-height:222px;padding:24px 25px 28px;border-top:2px solid #a4c591;background:#edf2e9;transition:background .2s,transform .2s}
