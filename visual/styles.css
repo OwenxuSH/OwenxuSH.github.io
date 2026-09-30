@@ -239,3 +239,11 @@ h2{font-size:clamp(37px,4vw,54px);line-height:1.13}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 nav .version-switch{padding-left:18px;border-left:1px solid #b7c5bb;color:#35694d}
 @media(max-width:600px){nav{flex-wrap:wrap;justify-content:flex-start}nav .version-switch{padding-left:0;border-left:0}}
+.hero-social{flex-wrap:wrap}
+.contact-profile-links{margin:28px 0 0;color:#5c6c67;font-size:14px;line-height:1.7}
+.contact-profile-links a{text-decoration:underline;text-underline-offset:3px}
+.wechat-contact{margin-top:50px;padding-top:34px;border-top:1px solid #d7e2d4}
+.wechat-contact h2{margin:0 0 8px;font-size:30px}
+.wechat-contact p{margin:0 0 18px;color:var(--muted);font-size:15px}
+.wechat-qr-link{display:inline-block;max-width:100%}
+.wechat-qr{display:block;width:min(100%,360px);height:auto;mix-blend-mode:multiply}
