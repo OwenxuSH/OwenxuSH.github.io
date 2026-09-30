@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f7f3">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Research projects by Zhengning Xu in AI for Biology, multimodal behavior analysis, causal video evaluation, and wearable sensing.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Research · Zhengning Xu">
@@ -12,29 +12,41 @@
   <title>Research · Zhengning Xu</title>
   <link rel="canonical" href="https://owenxush.github.io/research.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body class="inner-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="index.html" aria-label="Zhengning Xu, home"><span class="brand-mark">ZX<span class="brand-dot">.</span></span><span class="brand-name">Zhengning Xu</span><span class="brand-home">Home</span></a>
-      <nav aria-label="Main navigation">
+      <a class="brand" href="index.html">Zhengning Xu</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="research.html" aria-current="page">Research</a>
         <a href="highlights.html">Highlights</a>
-        <a class="nav-contact" href="contact.html">Contact <span aria-hidden="true">↗</span></a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-intro shell research-intro" aria-labelledby="page-title">
-      <p class="section-kicker">Research</p>
-      <h1 id="page-title">AI for scientific questions that matter</h1>
-      <p>I study what AI systems must represent, predict, or explain before their outputs can support scientific claims. My work ranges from genetic interactions and cancer drug response to animal behavior, wearable sensing, and causal video generation.</p>
-      <p class="research-intro-question">Across these areas: <strong>What are we asking the model to learn, and how would we know if it learned it?</strong></p>
+  <div class="page-frame shell">
+  <aside class="profile-sidebar" aria-label="Profile">
+    <a class="profile-photo" href="index.html" aria-label="Zhengning Xu, home"><img src="assets/zhengning-portrait.webp" width="168" height="168" alt="Illustrated portrait of Zhengning Xu"></a>
+    <p class="profile-name">Zhengning Xu <span>许正宁</span></p>
+    <p class="profile-affiliation">Computer Science and Technology<br>ShanghaiTech University</p>
+    <p class="profile-affiliation">Research Intern<br>DeepDelta Lab · Shanghai Jiao Tong University</p>
+    <p class="profile-focus">Research interests: AI for Science, computational biology, multimodal learning, and world models.</p>
+    <ul class="profile-links">
+      <li class="location">Shanghai, China</li>
+      <li><a href="mailto:xuzhn2024@shanghaitech.edu.cn">Email</a></li>
+      <li><a href="https://github.com/OwenxuSH">GitHub</a></li>
+    </ul>
+  </aside>
+  <main id="main" class="page-main">
+    <section class="page-intro" aria-labelledby="page-title">
+      <h1 id="page-title">Research</h1>
+      <p>Selected projects in AI for Science, computational biology, multimodal behavior analysis, and physical-world modeling.</p>
     </section>
     <section class="research-section shell" id="research" aria-labelledby="research-title">
       <div class="section-heading">
@@ -54,11 +66,9 @@
           <div class="project-main">
             <div class="project-topline"><span>Bioinformatics</span><span>ShanghaiTech University · Course research</span></div>
             <h3>Context-specific synthetic lethality</h3>
-            <p class="project-question">Does a predicted genetic interaction still hold in a different cellular context?</p>
-            <p class="project-summary">Synthetic lethality offers a way to target cancer cells through pairs of genes: disrupting both can be harmful even when disrupting either one alone is tolerated. It is often formulated as gene-pair classification, yet the interaction vary substantially across cell lines with different genetic backgrounds.</p>
+            <p class="project-summary">Synthetic lethality offers a way to target cancer cells through pairs of genes: disrupting both can be harmful even when disrupting either one alone is tolerated. It is often formulated as gene-pair classification, yet the interactions vary substantially across cell lines with different genetic backgrounds.</p>
             <p class="project-detail">We explored a multimodal biological representation combining gene expression, scGPT, GenePT, ESM protein embeddings, and protein–protein interaction networks. We considered both prediction within a cell line and generalization to cellular contexts unseen during training.</p>
             <p class="project-contribution"><strong>My work.</strong> I collected and processed data, helped design the GCN-based architecture, and benchmarked single-cell-line and cross-cell-line settings.</p>
-            <div class="tags"><span>Multi-omics</span><span>GCN</span><span>Synthetic lethality</span><span>Context generalization</span></div>
           </div>
         </article>
 
@@ -73,11 +83,9 @@
           <div class="project-main">
             <div class="project-topline"><span>Computational oncology</span><span>Shanghai Jiao Tong University · SAI</span></div>
             <h3>HappyRabbit <span>— interpretable cancer drug response</span></h3>
-            <p class="project-question">What should a drug-response model provide beyond a low prediction error?</p>
             <p class="project-summary">Drug-response prediction is useful only if comparisons are fair and the evidence behind a model's explanations can be examined. An accurate predictor can still be difficult to trust when benchmarks use different splits or when explanations are illustrated through a few selected examples.</p>
             <p class="project-detail">HappyRabbit built a common-panel benchmark of 122,178 drug–cell-line pairs and evaluated ten models under identical splits. The study paired prediction with dataset-scale attribution validation, in-silico perturbation, pathway analysis, and literature-based evidence auditing. PrototypeSCL achieved the strongest reported performance within this controlled comparison.</p>
             <p class="project-contribution"><strong>My work.</strong> I contributed to the PrototypeSCL / SparseProt model design, the benchmark against nine baselines, and an attribution workflow using integrated gradients, virtual knockouts, and independent literature checks.</p>
-            <div class="tags"><span>Drug response</span><span>Graph learning</span><span>Interpretability</span></div>
           </div>
         </article>
 
@@ -92,11 +100,9 @@
           <div class="project-main">
             <div class="project-topline"><span>Computational neuroscience</span><span>ShanghaiTech University · AI honor Program</span></div>
             <h3>MouseGPT <span>— describing behavior in natural language</span></h3>
-            <p class="project-question">How can we leverage animal behavior represented in natural language?</p>
             <p class="project-summary">Traditional animal-behavior analysis often relies on predefined categories, manual annotation, or purely kinematic similarity. Those choices can limit the range of behaviors a researcher is able to describe or discover. MouseGPT reframes the task as open-vocabulary multimodal understanding.</p>
             <p class="project-detail">Built on more than 42 million video frames, the framework maps mouse video into natural-language descriptions and computable semantic representations. These support behavior profiling, clustering across views, and novel-behavior discovery. The interesting shift is in the research question itself: the representation gives researchers a way to ask about behavior beyond a fixed set of classes.</p>
             <p class="project-contribution"><strong>My work.</strong> I reproduced the MouseGPT analysis pipeline and comparison methods, including pose-tracking and keypoint-based baselines; ran evaluation on established benchmarks such as MABE 2022 and CalMS21; and improved the agent interface used for downstream analysis.</p>
-            <div class="tags"><span>Vision-language models</span><span>Behavior analysis</span><span>Benchmarking</span></div>
           </div>
         </article>
 
@@ -115,11 +121,9 @@
           <div class="project-main">
             <div class="project-topline"><span>Generative world model</span><span>Shanghai Jiao Tong University · SAI</span></div>
             <h3>CausalCascade <span>— evaluating how events unfold</span></h3>
-            <p class="project-question">If a generated video looks plausible, did the model learn the causal structure?</p>
             <p class="project-summary">A video model can generate a visually convincing future while missing the physical event chain that makes the scene coherent. CausalCascade evaluates whether image-to-video models can realize complete causal processes instead of isolated plausible events.</p>
-            <p class="project-detail">The benchmark contains 50 simulator-grounded physical scenes, thousands of controlled variants, structured event graphs, and paired counterfactual interventions. Across nine image-to-video models, the study finds a persistent gap between recovering event and generating their causal relations. It examines event understanding, motion localization, and the consistency of response when an intervention changes the scene.</p>
+            <p class="project-detail">The benchmark contains 50 simulator-grounded physical scenes, thousands of controlled variants, structured event graphs, and paired counterfactual interventions. Across nine image-to-video models, the study finds a persistent gap between recovering events and generating their causal relations. It examines event understanding, motion localization, and the consistency of response when an intervention changes the scene.</p>
             <p class="project-contribution"><strong>My work.</strong> I designed the end-to-end VQA evaluation workflow for generated videos, from event-graph-grounded questions and model-output assessment to score analysis. I analyzed the results through a causal lens—whether models preserved event occurrence, dependencies, temporal order, and outcomes—and wrote the full manuscript.</p>
-            <div class="tags"><span>Video generation</span><span>Causal reasoning</span><span>Evaluation</span></div>
           </div>
         </article>
 
@@ -134,18 +138,17 @@
           <div class="project-main">
             <div class="project-topline"><span>Wearable sensing</span><span>ShanghaiTech University · PRP</span></div>
             <h3>Fabric wristband for human–machine interaction</h3>
-            <p class="project-question">How can wearable sensing make physiological signals and human movement reliably interpretable without compromising comfort?</p>
             <p class="project-summary">This project developed a breathable fabric wristband for comfortable physiological and motion sensing. The integrated system supports wireless monitoring of heart rate, oxygen saturation, and gesture recognition.</p>
             <p class="project-detail">For swing analysis, timing can vary even when two motions express the same gesture. Dynamic Time Warping aligns motion sequences before clustering forehand and backhand swings, allowing the analysis to focus on shape rather than exact timing.</p>
             <p class="project-contribution"><strong>My work.</strong> I developed the signal-processing and analysis pipeline: processing PPG data for heart-rate and SpO₂ estimation, calibrating and cleaning IMU motion data, and combining Dynamic Time Warping with k-means clustering to distinguish forehand and backhand swings despite differences in speed and duration.</p>
-            <div class="tags"><span>Time-series analysis</span><span>DTW</span><span>Human–machine interaction</span></div>
           </div>
         </article>
       </div>
     </section>
 
   </main>
+</div>
 
-  <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 Zhengning Xu</span><span>Shanghai, China <span aria-hidden="true">·</span> Built with care and curiosity</span></div></footer>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 Zhengning Xu</span><span>Shanghai, China</span></div></footer>
 </body>
 </html>
