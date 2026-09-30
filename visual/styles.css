@@ -41,6 +41,8 @@ h1{font-size:clamp(54px,5.6vw,84px);line-height:1.09;max-width:680px;margin:25px
 h1 em{color:#407a58;font-weight:400}
 .hero-lede{max-width:535px;color:#51635c;font-size:20px;line-height:1.75;margin-bottom:31px}
 .hero-followup{max-width:535px;color:#607268;font-size:16px;line-height:1.7}
+.hero-cv{max-width:535px;margin:20px 0 0;color:#607268;font-size:14px;line-height:1.6}
+.hero-cv a{color:#3e7450;text-decoration:underline;text-underline-offset:3px;font-weight:700}
 .hero-social{display:flex;gap:24px;margin-top:24px;color:#3e7450;font-size:13px;font-weight:700}
 .hero-social a{border-bottom:1px solid #9fbea4;padding-bottom:4px}
 .hero-social a:hover{color:#6a9d36}

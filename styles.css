@@ -50,6 +50,8 @@ h1, h2, h3, p { margin-top: 0; }
 .academic-section ul { margin: 0; padding-left: 21px; }
 .academic-section li { margin-bottom: 7px; }
 .intro-section p { max-width: 870px; }
+.intro-section .cv-links { margin-top: 16px; color: var(--muted); font-size: 15px; }
+.intro-section .cv-links a { text-decoration: underline; text-underline-offset: 3px; }
 .fact-list strong { color: #3b454d; }
 .entry-list { margin: 0; padding: 0; list-style: none; }
 .entry-list li { margin: 0; padding: 10px 0; border-bottom: 1px solid #edf0f1; }

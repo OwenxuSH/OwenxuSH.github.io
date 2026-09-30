@@ -6,7 +6,7 @@ A static English academic homepage with two layouts. The traditional academic ve
 
 This directory is the root of the GitHub Pages user repository `OwenxuSH/OwenxuSH.github.io`. The public site is `https://owenxush.github.io/`, published from the `main` branch root.
 
-The site intentionally contains no local project manuscripts or PDFs. The source materials in `../resources/` are for drafting only, and are not needed by the deployed site.
+The published English and Chinese CVs are in `files/` and linked from both homepages. Other source materials in `../resources/` are for drafting only and are not needed by the deployed site.
 
 ## Updating content
 
